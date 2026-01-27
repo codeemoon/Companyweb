@@ -26,9 +26,12 @@ import UXDesignService from "./conponent/ServicesComponent'/UXDesignService";
 import VisualProductDesignService from "./conponent/ServicesComponent'/VisualProductDesignService";
 import PlanningRoadmappingService from "./conponent/ServicesComponent'/PlanningRoadmappingService";
 import ScrollToTop from "./conponent/ScrollToTop";
+import PageTitleUpdater from "./conponent/PageTitleUpdater";
+
 function App() {
   return (
     <>
+    <PageTitleUpdater />
     <ScrollToTop/>
       <Routes>
         <Route
