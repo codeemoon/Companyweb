@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Codystar:wght@300;400&family=Great+Vibes&family=Lexend+Giga:wght@100..900&family=Manrope:wght@200..800&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", sans-serif;
+  --font-lexend: "Lexend Giga", sans-serif;
+  --font-display: "Red Hat Display", sans-serif;
+  --font-mono: "Roboto Mono", monospace;
+
+  /* Smoother cubic-bezier ease */
+  --animate-slide-up: slide-up 1.0s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  --animate-slide-down: slide-down 0.8s ease-out forwards;
+
+  @keyframes slide-up {
+    0% {
+      transform: translateY(60px) translateZ(0); /* Hardware accelerate */
+      opacity: 0;
+      filter: blur(5px); /* Add slight blur for smoother feel */
+    }
+    100% {
+      transform: translateY(0) translateZ(0);
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+
+  @keyframes slide-down {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+html, body {
+  font-family: "Manrope", sans-serif;
+  overflow-x: clip; 
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
