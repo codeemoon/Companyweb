@@ -11,8 +11,11 @@ function Experience() {
          <div className="relative w-full max-w-[500px]">
             <div className="w-full h-[600px] rounded-3xl rounded-bl-[200px] overflow-hidden mt-25">
                 <img 
-                    src="/picture/design.png" 
+                    src="/picture/design.webp" 
                     alt="Experience Design" 
+                    loading="lazy"
+                    width="500"
+                    height="600"
                     className="w-full h-full object-cover"
                 />
             </div>

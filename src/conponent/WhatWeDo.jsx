@@ -91,8 +91,11 @@ function WhatWeDo() {
                         {services.map((service) => (
                             <img
                                 key={service.id}
-                                src={service.image}
+                                src={service.image.replace('.png', '.webp')}
                                 alt={service.title}
+                                loading="lazy"
+                                width="800"
+                                height="1083"
                                 className={`absolute top-0 right-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${
                                     activeServiceId === service.id ? "opacity-100" : "opacity-0"
                                 }`}

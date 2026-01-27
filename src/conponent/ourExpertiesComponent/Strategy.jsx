@@ -42,8 +42,11 @@ function Strategy() {
          <div className="relative w-full max-w-[500px]">
             <div className="w-full h-[600px] rounded-3xl rounded-bl-[200px] overflow-hidden">
                 <img 
-                    src="/picture/stategyInExpertires.png" 
+                    src="/picture/stategyInExpertires.webp" 
                     alt="Strategy & Consulting" 
+                    loading="lazy"
+                    width="500"
+                    height="600"
                     className="w-full h-full object-cover"
                 />
             </div>

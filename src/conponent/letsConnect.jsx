@@ -286,8 +286,11 @@ function Project() {
               className="w-fit cursor-pointer hover:opacity-80 transition-opacity"
             >
               <img
-                src="/picture/whatsapp.png"
+                src="/picture/whatsapp.webp"
                 alt="WhatsApp"
+                loading="lazy"
+                width="80"
+                height="80"
                 className="w-16 md:w-20 h-auto object-contain"
               />
             </a>

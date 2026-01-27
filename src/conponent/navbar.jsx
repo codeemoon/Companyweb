@@ -70,7 +70,7 @@ function Navbar() {
            {/* Logo placeholder - using text/svg if needed, or keeping existing logic if there was a logo */}
            {!isTransparentPage && (
               <img 
-                src="/picture/pillows.png" 
+                src="/picture/pillows.webp" 
                 alt="Logo" 
                 className={`w-10 h-10 object-contain ${!isProjectPage ? "invert" : ""}`}
               />

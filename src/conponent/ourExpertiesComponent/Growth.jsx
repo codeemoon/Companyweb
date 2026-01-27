@@ -12,8 +12,11 @@ function Growth() {
          <div className="relative w-full max-w-[500px]">
             <div className="w-full h-[600px] rounded-3xl rounded-bl-[200px] overflow-hidden mt-25">
                 <img 
-                    src="/picture/growthproduct.png" 
+                    src="/picture/growthproduct.webp" 
                     alt="Product Growth" 
+                    loading="lazy"
+                    width="500"
+                    height="600"
                     className="w-full h-full object-cover"
                 />
             </div>

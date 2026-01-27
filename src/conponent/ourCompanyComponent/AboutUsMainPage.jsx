@@ -40,8 +40,11 @@ function AboutUsMain (){
 
                     <div className="mt-20 md:mt-40 2xl:mt-70 w-full flex flex-col 2xl:flex-row items-start justify-between gap-10">
                         <img 
-                            src="/picture/clientTrustImage.png" 
+                            src="/picture/clientTrustImage.webp" 
                             alt="Client Trust" 
+                            loading="lazy"
+                            width="600"
+                            height="500"
                             className="object-cover h-auto md:h-[500px] w-full 2xl:w-auto max-w-full 2xl:max-w-[600px] rounded-br-[100px] md:rounded-br-[200px]" 
                         />
                         <div className="flex flex-col items-start gap-8 mt-10 w-full 2xl:w-[600px] translate-x-0 2xl:translate-x-60">
@@ -75,7 +78,14 @@ function AboutUsMain (){
                 </div>
                 
                 <div className="flex w-full 2xl:justify-end mt-10">
-                     <img src="/picture/aboutUsMainImage.png" alt="About Us" className="object-cover w-full 2xl:w-[600px] h-[300px] md:h-[600px] rounded-bl-[100px] md:rounded-bl-[200px]" />
+                     <img 
+                        src="/picture/aboutUsMainImage.webp" 
+                        alt="About Us" 
+                        loading="lazy"
+                        width="600"
+                        height="600"
+                        className="object-cover w-full 2xl:w-[600px] h-[300px] md:h-[600px] rounded-bl-[100px] md:rounded-bl-[200px]" 
+                     />
                 </div>
             </div>
         </div>

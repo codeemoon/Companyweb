@@ -15,7 +15,7 @@ function Home() {
     return (
         <div className="relative w-full bg-black">
             <img 
-                src="/picture/landingPageImage.png" 
+                src="/picture/landingPageImage.webp" 
                 alt="Landing Page" 
                 className="w-full h-[calc(100vh-80px)] object-cover block opacity-60"
             />

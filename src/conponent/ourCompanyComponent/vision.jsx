@@ -73,8 +73,11 @@ function SharedVision (){
                             </button>
                         </ScrollReveal>
                         <img 
-                            src="/picture/vision.png" 
+                            src="/picture/vision.webp" 
                             alt="Shared Vision" 
+                            loading="lazy"
+                            width="600"
+                            height="800"
                             className="w-full 2xl:w-[600px] h-[400px] md:h-[800px] object-cover rounded-bl-[100px] md:rounded-bl-[200px]" 
                         />
                     </div>

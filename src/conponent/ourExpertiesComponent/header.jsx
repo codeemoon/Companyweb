@@ -62,7 +62,7 @@ function HeaderOfExperties() {
       <div className="relative w-full h-[calc(100vh-6rem)] font-sans">
         {/* Background Image */}
         <img
-          src="/picture/Navbar_image.png"
+          src="/picture/Navbar_image.webp"
           alt="Hero Background"
           className="absolute inset-0 w-full h-full object-cover"
         />

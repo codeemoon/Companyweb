@@ -19,8 +19,11 @@ function AboutUs() {
                         onMouseLeave={() => setIsHovered(false)}
                     >
                         <img 
-                            src="/picture/AboutUs.png" 
+                            src="/picture/AboutUs.webp" 
                             alt="About Us" 
+                            loading="lazy"
+                            width="800"
+                            height="600"
                             className="w-full h-auto object-cover"
                         />
                     </div>

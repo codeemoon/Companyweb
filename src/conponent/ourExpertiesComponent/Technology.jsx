@@ -42,8 +42,11 @@ function Technology() {
          <div className="relative w-full max-w-125">
             <div className="w-full h-150 rounded-3xl rounded-bl-[200px] overflow-hidden">
                 <img 
-                    src="/picture/headerFor Exp.png" 
+                    src="/picture/headerFor Exp.webp" 
                     alt="Technology Expertise" 
+                    loading="lazy"
+                    width="600"
+                    height="600"
                     className="w-full h-full object-cover"
                 />
             </div>

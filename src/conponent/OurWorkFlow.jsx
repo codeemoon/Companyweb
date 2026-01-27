@@ -83,8 +83,11 @@ function OurWorkFlow() {
                                 {/* Image Container */}
                                 <div className="w-[650px] h-[707px] rounded-3xl overflow-hidden relative group shadow-sm">
                                     <img 
-                                        src={step.image} 
+                                        src={step.image.replace('.png', '.webp')} 
                                         alt={step.title}
+                                        loading="lazy"
+                                        width="650"
+                                        height="707"
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
                                     <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
