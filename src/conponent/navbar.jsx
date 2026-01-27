@@ -1,9 +1,9 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 
 
 function Navbar() {
-
+  const navigate = useNavigate()
   const location = useLocation();
   const [show, setShow] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
@@ -66,7 +66,7 @@ function Navbar() {
       </div>
 
       {/* Center Section - Logo */}
-      <div className={`absolute left-0 md:left-1/2 top-1/2 -translate-y-1/2 md:-translate-x-1/2 pl-6 md:pl-0 ${isTransparentPage ? '' : ''}`}>
+      <div onClick={(()=>onclick(navigate('/')))} className={`cursor-pointer absolute left-0 md:left-1/2 top-1/2 -translate-y-1/2 md:-translate-x-1/2 pl-6 md:pl-0 ${isTransparentPage ? '' : ''}`}>
            {/* Logo placeholder - using text/svg if needed, or keeping existing logic if there was a logo */}
            {!isTransparentPage && (
               <img 
