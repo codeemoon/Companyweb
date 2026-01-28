@@ -1,9 +1,15 @@
 
 import { ScrollReveal } from "../ScrollReveal";
+import SEO from "../SEO";
 
 function FirstSection() {
   return (
     <div className="w-full flex flex-col p-6 md:p-10">
+      <SEO 
+        title="About Pillow | Top Software Company in Chhattisgarh & UP" 
+        description="Learn about Pillow, the innovative software company bridging technology and business. Operating in Bhilai, Durg, and Prayagraj."
+        keywords="About Pillow, Software Company Profile, Bhilai Tech Company"
+      />
       <ScrollReveal>
         <h1 className="text-5xl md:text-7xl lg:text-[96px] text-[#292929] font-normal leading-tight mb-8 md:mb-14 break-words">
             We highly focus on <br />result

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import SEO from '../SEO';
 
 const HeaderInService = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,6 +39,11 @@ const HeaderInService = () => {
 
   return (
     <div className="p-6 md:p-10 flex flex-col justify-start items-start w-full relative">
+        <SEO 
+            title="Our Services - Mobile App & Web Development | Pillow" 
+            description="Explore our IT services: Android/iOS App Development, Website Design, AI Solutions, and Backend Infrastructure. Affordable pricing starting ₹1000."
+            keywords="Services, App Development, Web Design, AI, UX Design, Pillow Services"
+        />
         <div className="max-w-full relative group">
             <h1 className="text-4xl md:text-7xl lg:text-[88px] text-[#292929] m-0 leading-[1.1] font-normal font-sans mt-8 whitespace-normal lg:whitespace-nowrap break-words">
                 The core of success <br className="hidden lg:block"/> is service

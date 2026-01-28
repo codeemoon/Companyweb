@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { ScrollReveal } from "../ScrollReveal";
+import SEO from "../SEO";
 
 function HeaderOfExperties() {
   const [activeSection, setActiveSection] = useState("");
@@ -58,6 +59,11 @@ function HeaderOfExperties() {
 
   return (
     <>
+      <SEO 
+        title="Our Expertise - Technology, Design & Strategy | Pillow" 
+        description="Pillow delivers excellence in Technology, Design, Strategy, and Growth. We transform ideas into scalable business solutions."
+        keywords="Pillow Expertise, Tech Strategy, Digital Growth, UI/UX Design, IT Consulting"
+      />
       {/* Hero Section */}
       <div className="relative w-full h-[calc(100vh-6rem)] font-sans">
         {/* Background Image */}

@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import ScrollReveal from './ScrollReveal';
+import SEO from './SEO';
+import StructuredData from './StructuredData';
 
 function Home() {
     const terms = ["Software", "Apps", "Websites", "Seo Optimization", "Digital Products"];
@@ -14,6 +16,12 @@ function Home() {
 
     return (
         <div className="relative w-full bg-black">
+            <SEO 
+                title="Software Development Company in Bhilai & Durg | Pillow"
+                description="Pillow is a top-rated software development agency in Bhilai, Chhattisgarh. We specialize in Mobile Apps (Android/iOS), Web Development, and AI Solutions."
+                keywords="Software Company Bhilai, Web Developer Durg, App Development Chhattisgarh, AI Solutions, Pillow Agency"
+            />
+            <StructuredData />
             <img 
                 src="/picture/landingPageImage.webp" 
                 alt="Landing Page" 

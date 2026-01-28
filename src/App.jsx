@@ -1,38 +1,37 @@
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./conponent/navbar";
-import Home from "./conponent/home";
-import VideoSection from "./conponent/videoSection";
-import WhatWeDo from "./conponent/WhatWeDo";
-import OurWorkFlow from "./conponent/OurWorkFlow";
-import AboutUs from "./conponent/AboutUs";
-import LetsTalk from "./conponent/LetsTalk";
-import Footer from "./conponent/Footer";
-import Project from "./conponent/letsConnect";
-import IntroOfSection from "./conponent/ourCompanyComponent/firstSection";
-import AboutUsMain from "./conponent/ourCompanyComponent/AboutUsMainPage";
-import SharedVision from "./conponent/ourCompanyComponent/vision";
-import HeaderOfExperties from "./conponent/ourExpertiesComponent/header";
-import Technology from "./conponent/ourExpertiesComponent/Technology";
-import Experience from "./conponent/ourExpertiesComponent/Experience";
-import Strategy from "./conponent/ourExpertiesComponent/Strategy";
-import Growth from "./conponent/ourExpertiesComponent/Growth";
-import HeaderInService from "./conponent/ServicesComponent'/HeaderInService";
-import MobileAppService from "./conponent/ServicesComponent'/MobileAppService";
-import WebDevelopmentService from "./conponent/ServicesComponent'/WebDevelopmentService";
-import AISolutionsService from "./conponent/ServicesComponent'/AISolutionsService";
-import BackendInfrastructureService from "./conponent/ServicesComponent'/BackendInfrastructureService";
-import ProductDiscoveryService from "./conponent/ServicesComponent'/ProductDiscoveryService";
-import UXDesignService from "./conponent/ServicesComponent'/UXDesignService";
-import VisualProductDesignService from "./conponent/ServicesComponent'/VisualProductDesignService";
-import PlanningRoadmappingService from "./conponent/ServicesComponent'/PlanningRoadmappingService";
-import ScrollToTop from "./conponent/ScrollToTop";
-import PageTitleUpdater from "./conponent/PageTitleUpdater";
+import  {HelmetProvider}  from 'react-helmet-async';
+import Navbar from "./component/navbar";
+import Home from "./component/home";
+import VideoSection from "./component/videoSection";
+import WhatWeDo from "./component/WhatWeDo";
+import OurWorkFlow from "./component/OurWorkFlow";
+import AboutUs from "./component/AboutUs";
+import LetsTalk from "./component/LetsTalk";
+import Footer from "./component/Footer";
+import Project from "./component/letsConnect";
+import IntroOfSection from "./component/ourCompanyComponent/firstSection";
+import AboutUsMain from "./component/ourCompanyComponent/AboutUsMainPage";
+import SharedVision from "./component/ourCompanyComponent/vision";
+import HeaderOfExperties from "./component/ourExpertiesComponent/header";
+import Technology from "./component/ourExpertiesComponent/Technology";
+import Experience from "./component/ourExpertiesComponent/Experience";
+import Strategy from "./component/ourExpertiesComponent/Strategy";
+import Growth from "./component/ourExpertiesComponent/Growth";
+import HeaderInService from "./component/ServicesComponent/HeaderInService";
+import MobileAppService from "./component/ServicesComponent/MobileAppService";
+import WebDevelopmentService from "./component/ServicesComponent/WebDevelopmentService";
+import AISolutionsService from "./component/ServicesComponent/AISolutionsService";
+import BackendInfrastructureService from "./component/ServicesComponent/BackendInfrastructureService";
+import ProductDiscoveryService from "./component/ServicesComponent/ProductDiscoveryService";
+import UXDesignService from "./component/ServicesComponent/UXDesignService";
+import VisualProductDesignService from "./component/ServicesComponent/VisualProductDesignService";
+import PlanningRoadmappingService from "./component/ServicesComponent/PlanningRoadmappingService";
+import ScrollToTop from "./component/ScrollToTop";
 
 function App() {
   return (
-    <>
-    <PageTitleUpdater />
-    <ScrollToTop/>
+    <HelmetProvider>
+      <ScrollToTop/>
       <Routes>
         <Route
           path="/"
@@ -113,7 +112,7 @@ function App() {
         }/>
       </Routes>
       
-    </>
+    </HelmetProvider>
   );
 }
 

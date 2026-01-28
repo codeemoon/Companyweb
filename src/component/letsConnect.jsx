@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Navbar from "./navbar";
 import ScrollReveal from "./ScrollReveal";
 import toast from "react-hot-toast";
+import SEO from "./SEO";
 
 function Project() {
   const [formData, setFormData] = useState({
@@ -35,16 +36,12 @@ function Project() {
     );
 
     // try {
-
     //   let response = await axios.post(`http://localhost:5000/api/v1/submit-query` , formData)
-
     // let response = await fetch(`http://localhost:5000/api/v1/submit-query`, {
-
     //     method : "POST",
     //     headers: {
     //         "Content-Type": "application/json",
     //     },
-
     //     body : JSON.stringify(formData)
     // })
     // let result = await response.json()
@@ -56,6 +53,11 @@ function Project() {
 
   return (
     <>
+      <SEO 
+        title="Start a Project | Pillow - Software Development Agency" 
+        description="Ready to build your dream app or website? Contact Pillow for affordable and premium software development services in Bhilai, Durg & Prayagraj."
+        keywords="Contact Pillow, Hire Developers, App Development Quote, Website Cost Bhilai"
+      />
       <Navbar />
       <section className="w-full bg-[#fcfdff] min-h-screen pt-32 pb-24 px-6 md:px-12 flex flex-col items-start">
         <div className="max-w-7xl w-full flex flex-col gap-16">
