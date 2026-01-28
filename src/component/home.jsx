@@ -15,7 +15,7 @@ function Home() {
     }, []);
 
     return (
-        <div className="relative w-full bg-black">
+        <section aria-label="Hero" className="relative w-full bg-black">
             <SEO 
                 title="Software Development Company in Bhilai & Durg | Pillow"
                 description="Pillow is a top-rated software development agency in Bhilai, Chhattisgarh. We specialize in Mobile Apps (Android/iOS), Web Development, and AI Solutions."
@@ -29,11 +29,11 @@ function Home() {
             />
             
             <div className="absolute top-[40%] left-6 2xl:left-12 -translate-y-1/2 font-sans font-light leading-none tracking-tight w-[calc(100%-3rem)] 2xl:w-auto">
-                <ScrollReveal delay="0s" className="text-[#ffffff] text-4xl sm:text-5xl md:text-7xl 2xl:text-[88px]">
+                <ScrollReveal as="h1" delay="0s" className="text-[#ffffff] text-4xl sm:text-5xl md:text-7xl 2xl:text-[88px]">
                     Develop
                 </ScrollReveal>
                 
-                <ScrollReveal delay="0.1s" className="flex flex-col 2xl:flex-row items-start 2xl:items-center gap-2 2xl:gap-4 text-[#4f4f4f] text-4xl sm:text-5xl md:text-7xl 2xl:text-[88px] whitespace-normal 2xl:whitespace-nowrap">
+                <ScrollReveal as="h2" delay="0.1s" className="flex flex-col 2xl:flex-row items-start 2xl:items-center gap-2 2xl:gap-4 text-[#4f4f4f] text-4xl sm:text-5xl md:text-7xl 2xl:text-[88px] whitespace-normal 2xl:whitespace-nowrap">
                     <span>World Class</span>
                     <div className="h-[1.2em] overflow-hidden relative w-full 2xl:min-w-[300px]">
                         <div key={index} className="animate-slide-up">
@@ -47,7 +47,7 @@ function Home() {
                     <p>With proper strategy, team and technology</p>
                 </ScrollReveal>
             </div>
-        </div>
+        </section>
     )
 }
 

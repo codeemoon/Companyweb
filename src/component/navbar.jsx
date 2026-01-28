@@ -49,21 +49,22 @@ function Navbar() {
     <>
     <nav className={`w-full h-20 px-6 md:px-12 flex items-center justify-between font-sans z-50 ${isTransparentPage ? 'absolute top-0' : `fixed top-0 transition-transform duration-500 ease-in-out ${show ? 'translate-y-0' : '-translate-y-full'}`} ${themeClasses}`}>
       {/* Left Section - Navigation Links (Desktop Only) */}
-      <div className="hidden xl:flex items-center gap-8 font-medium tracking-wide">
+      <ul className="hidden xl:flex items-center gap-8 font-medium tracking-wide list-none">
         {[
           { name: "Our Company", path: "/ourcompany" },
           { name: "Our Expertise", path: '/ourexperties' },
           { name: "Services", path: "/services" }
         ].map((item) => (
-          <a
-            key={item.name}
-            href={item.path}
-            className={`relative text-[16px] font-bold transition-colors duration-300 ${linkColor} ${hoverColor} after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full`}
-          >
-            {item.name}
-          </a>
+          <li key={item.name}>
+            <a
+              href={item.path}
+              className={`relative text-[16px] font-bold transition-colors duration-300 ${linkColor} ${hoverColor} after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full`}
+            >
+              {item.name}
+            </a>
+          </li>
         ))}
-      </div>
+      </ul>
 
       {/* Center Section - Logo */}
       <div onClick={(()=>onclick(navigate('/')))} className={`cursor-pointer absolute left-0 md:left-1/2 top-1/2 -translate-y-1/2 md:-translate-x-1/2 pl-6 md:pl-0 ${isTransparentPage ? '' : ''}`}>

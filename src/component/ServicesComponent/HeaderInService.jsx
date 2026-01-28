@@ -38,7 +38,7 @@ const HeaderInService = () => {
   };
 
   return (
-    <div className="p-6 md:p-10 flex flex-col justify-start items-start w-full relative">
+    <header className="p-6 md:p-10 flex flex-col justify-start items-start w-full relative">
         <SEO 
             title="Our Services - Mobile App & Web Development | Pillow" 
             description="Explore our IT services: Android/iOS App Development, Website Design, AI Solutions, and Backend Infrastructure. Affordable pricing starting ₹1000."
@@ -83,7 +83,7 @@ const HeaderInService = () => {
                 </div>
             </div>
         </div>
-    </div>
+    </header>
   );
 };
 

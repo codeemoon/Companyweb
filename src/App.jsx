@@ -27,6 +27,7 @@ import UXDesignService from "./component/ServicesComponent/UXDesignService";
 import VisualProductDesignService from "./component/ServicesComponent/VisualProductDesignService";
 import PlanningRoadmappingService from "./component/ServicesComponent/PlanningRoadmappingService";
 import ScrollToTop from "./component/ScrollToTop";
+import FAQ from "./component/FAQ";
 
 function App() {
   return (
@@ -106,6 +107,7 @@ function App() {
           <div className="h-px bg-gray-200 mx-10"></div>
           <PlanningRoadmappingService/>
           <div className="h-px bg-gray-200 mx-10"></div>
+          <FAQ />
           <LetsTalk/>
           <Footer/>
           </>

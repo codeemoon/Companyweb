@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 
-export function ScrollReveal({ children, className = "", delay = "0s" }) {
+export function ScrollReveal({ children, className = "", delay = "0s", as: Component = "div" }) {
     const [isVisible, setIsVisible] = useState(false);
     const ref = useRef(null);
 
@@ -26,13 +26,13 @@ export function ScrollReveal({ children, className = "", delay = "0s" }) {
     }, []);
 
     return (
-        <div 
+        <Component 
             ref={ref} 
             className = {`${className} ${isVisible ? 'animate-[slide-up_1s_cubic-bezier(0.22,1,0.36,1)_forwards]' : 'opacity-0 will-change-transform'}`}
             style={{ animationDelay: isVisible ? delay : '0s' }}
         >
             {children}
-        </div>
+        </Component>
     );
 }
 

@@ -4,13 +4,13 @@ import SEO from "../SEO";
 
 function FirstSection() {
   return (
-    <div className="w-full flex flex-col p-6 md:p-10">
+    <section className="w-full flex flex-col p-6 md:p-10">
       <SEO 
         title="About Pillow | Top Software Company in Chhattisgarh & UP" 
         description="Learn about Pillow, the innovative software company bridging technology and business. Operating in Bhilai, Durg, and Prayagraj."
         keywords="About Pillow, Software Company Profile, Bhilai Tech Company"
       />
-      <ScrollReveal>
+      <ScrollReveal as="header">
         <h1 className="text-5xl md:text-7xl lg:text-[96px] text-[#292929] font-normal leading-tight mb-8 md:mb-14 break-words">
             We highly focus on <br />result
         </h1>
@@ -25,7 +25,7 @@ function FirstSection() {
           muted 
           playsInline
         />
-        <div className="flex flex-col text-lg md:text-[24px] font-medium w-full 2xl:max-w-87.5">
+        <article className="flex flex-col text-lg md:text-[24px] font-medium w-full 2xl:max-w-87.5">
           <ScrollReveal>
              <p className="text-[#7f7f7f]">
                 From very first idea to end of implementation we always inovate the product with our amazing taem.
@@ -37,13 +37,13 @@ function FirstSection() {
              </p>
           </ScrollReveal>
           <ScrollReveal>
-              <div className="mt-8 md:mt-12 text-4xl md:text-6xl font-bold font-serif tracking-wider text-[#292929]">
+              <blockquote className="mt-8 md:mt-12 text-4xl md:text-6xl font-bold font-serif tracking-wider text-[#292929]">
                 &ldquo;PILLOW&rdquo;
-              </div>
+              </blockquote>
           </ScrollReveal>
-        </div>
+        </article>
       </div>
-    </div>
+    </section>
   )
 }
 
