@@ -4,7 +4,7 @@ import SEO from './SEO';
 import StructuredData from './StructuredData';
 
 function Home() {
-    const terms = ["Software", "Apps", "Websites", "Seo Optimization", "Digital Products"];
+    const terms = ["Software", "Apps", "Websites", "SEO", "Digital Products"];
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
