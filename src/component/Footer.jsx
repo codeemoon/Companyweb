@@ -25,11 +25,8 @@ function Footer() {
                     </h3>
                     <div className="flex flex-col gap-4">
                         <a href="mailto:upadhyayakhand909@gmail.com" className="font-manrope text-[16px] text-[#7f7f7f] hover:text-[#fcfdff] transition-colors">
-                            upadhyayakhand90@gmail.com 
+                            upadhyayakhand909@gmail.com
                         </a>
-                        <p className="font-manrope text-[16px] text-[#7f7f7f]">
-                            +91 6392934409
-                        </p>
                         <p className="font-manrope text-[16px] text-[#7f7f7f]">
                             Pyaragraj, jhunsi , Uttarpradesh ,India,<br />
                             Bhiali, sec-6 , Durg , Chattisgarh , India
