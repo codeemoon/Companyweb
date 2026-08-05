@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import axios from "axios";
+import { submitInquiry } from "../api";
 import Navbar from "./navbar";
 import toast from "react-hot-toast";
 import SEO from "./SEO";
@@ -74,9 +74,7 @@ function Project() {
         formPayload.append("requirementPdf", requirementPdf);
       }
 
-      await axios.post(`${apiBaseUrl}/api/v1/submit-query`, formPayload, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
+      await submitInquiry(formPayload);
 
       toast.success("Inquiry sent successfully. We'll contact you soon.");
       setFormData({

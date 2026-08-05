@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
-
-const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
+import { adminLogin, fetchInquiries, updateInquiryStatus } from "../api";
 
 function Admin() {
   const [inquiries, setInquiries] = useState([]);
@@ -13,12 +11,9 @@ function Admin() {
   const [password, setPassword] = useState("");
   const [loginError, setLoginError] = useState("");
 
-  const updateInquiryStatus = async (id, status) => {
+  const handleUpdateInquiryStatus = async (id, status) => {
     try {
-      const response = await axios.patch(
-        `${apiBaseUrl}/api/v1/admin/inquiries/${id}/status`,
-        { status }
-      );
+      const response = await updateInquiryStatus(id, status);
 
       setInquiries((current) =>
         current.map((inquiry) =>
@@ -37,7 +32,7 @@ function Admin() {
     setError("");
 
     try {
-      await axios.post(`${apiBaseUrl}/api/v1/admin/login`, { password });
+      await adminLogin(password);
       sessionStorage.setItem("adminAuth", "true");
       setAuthenticated(true);
       setPassword("");
@@ -48,9 +43,9 @@ function Admin() {
   };
 
   useEffect(() => {
-    async function fetchInquiries() {
+    async function loadInquiries() {
       try {
-        const response = await axios.get(`${apiBaseUrl}/api/v1/admin/inquiries`);
+        const response = await fetchInquiries();
         const data = (response.data || []).map((item) => ({
           ...item,
           status: item.status || "",
@@ -65,7 +60,7 @@ function Admin() {
     }
 
     if (authenticated) {
-      fetchInquiries();
+      loadInquiries();
     } else {
       setLoading(false);
     }
@@ -194,21 +189,21 @@ function Admin() {
                     <div className="flex flex-wrap gap-3 mt-4">
                       <button
                         type="button"
-                        onClick={() => updateInquiryStatus(inquiry._id, "accepted")}
+                        onClick={() => handleUpdateInquiryStatus(inquiry._id, "accepted")}
                         className={`rounded-full border px-4 py-2 text-sm font-semibold transition ${inquiry.status === "accepted" ? "border-green-500 text-green-600" : "border-[#c4c5c7] text-[#333] hover:border-green-500 hover:text-green-600"}`}
                       >
                         Accepted
                       </button>
                       <button
                         type="button"
-                        onClick={() => updateInquiryStatus(inquiry._id, "rejected")}
+                        onClick={() => handleUpdateInquiryStatus(inquiry._id, "rejected")}
                         className={`rounded-full border px-4 py-2 text-sm font-semibold transition ${inquiry.status === "rejected" ? "border-red-500 text-red-600" : "border-[#c4c5c7] text-[#333] hover:border-red-500 hover:text-red-600"}`}
                       >
                         Rejected
                       </button>
                       <button
                         type="button"
-                        onClick={() => updateInquiryStatus(inquiry._id, "neutral")}
+                        onClick={() => handleUpdateInquiryStatus(inquiry._id, "neutral")}
                         className={`rounded-full border px-4 py-2 text-sm font-semibold transition ${inquiry.status === "" ? "border-[#1f2937] text-[#1f2937]" : "border-[#c4c5c7] text-[#333] hover:border-[#1f2937] hover:text-[#1f2937]"}`}
                       >
                         Neutral
