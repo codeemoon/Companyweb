@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import axios from "axios";
 import Navbar from "./navbar";
 import toast from "react-hot-toast";
@@ -18,6 +18,7 @@ function Project() {
     projectDescription: "",
   });
   const [requirementPdf, setRequirementPdf] = useState(null);
+  const fileInputRef = useRef(null);
   const [currentStep, setCurrentStep] = useState(1);
   const [loading, setLoading] = useState(false);
   const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
@@ -319,15 +320,47 @@ function Project() {
                   <label className="font-manrope text-sm text-[#292929] uppercase tracking-wider font-medium">
                     Upload Requirement PDF (Optional)
                   </label>
+
                   <input
+                    ref={fileInputRef}
                     type="file"
                     accept="application/pdf"
                     onChange={(event) => setRequirementPdf(event.target.files?.[0] || null)}
-                    className="w-full text-sm text-[#292929]"
+                    className="hidden"
+                    aria-hidden="true"
                   />
-                  {requirementPdf && (
-                    <p className="text-sm text-[#555]">Selected file: {requirementPdf.name}</p>
-                  )}
+
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+                    <button
+                      type="button"
+                      onClick={() => fileInputRef.current?.click()}
+                      className="inline-flex items-center gap-2 bg-[#292929] text-white px-4 py-2 rounded-md hover:bg-[#444] transition-colors"
+                    >
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M12 16V4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M7 11l5-5 5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M21 20H3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                      Upload PDF
+                    </button>
+
+                    <div className="flex items-center gap-3">
+                      {requirementPdf ? (
+                        <>
+                          <p className="text-sm text-[#555]">{requirementPdf.name}</p>
+                          <button
+                            type="button"
+                            onClick={() => setRequirementPdf(null)}
+                            className="text-sm text-[#ff4d4f] hover:underline"
+                          >
+                            Remove
+                          </button>
+                        </>
+                      ) : (
+                        <p className="text-sm text-[#777]">No file selected</p>
+                      )}
+                    </div>
+                  </div>
                 </div>
               </div>
             )}
