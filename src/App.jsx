@@ -28,6 +28,7 @@ import VisualProductDesignService from "./component/ServicesComponent/VisualProd
 import PlanningRoadmappingService from "./component/ServicesComponent/PlanningRoadmappingService";
 import ScrollToTop from "./component/ScrollToTop";
 import FAQ from "./component/FAQ";
+import Admin from "./component/Admin";
 
 function App() {
   return (
@@ -59,6 +60,8 @@ function App() {
             </>
           }
         ></Route>
+
+        <Route path="/admin" element={<Admin />} />
 
         <Route
           path="/ourcompany"

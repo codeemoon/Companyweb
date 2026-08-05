@@ -117,7 +117,7 @@ function Project() {
           <div className="flex flex-col gap-4 text-left w-full">
             <div>
               <h1 className="font-normal text-[40px] md:text-[60px] lg:text-[96px] text-[#292929] tracking-tight leading-none">
-                Let''s connect...
+                Let's connect...
               </h1>
             </div>
             <div>
@@ -398,48 +398,6 @@ function Project() {
               )}
             </div>
           </form>
-        </div>
-      </section>
-
-      <section className="w-full bg-[#fcfdff] pb-24 px-6 md:px-12 flex flex-col items-start z-10 relative">
-        <div className="max-w-7xl w-full flex flex-col gap-12">
-          <div>
-            <h2 className="font-manrope text-sm text-[#292929] uppercase tracking-wider font-medium">
-              Contact
-            </h2>
-          </div>
-
-          <div className="w-full">
-            <a href="mailto:upadhyayakhand909@gmail.com" className="block w-full">
-              <h1 className="font-manrope font-bold text-[32px] md:text-[60px] lg:text-[80px] text-[#292929] break-words hover:text-[#555] transition-colors leading-none tracking-tight">
-                upadhyayakhand909
-                <br className="md:hidden" />
-                @gmail.com
-              </h1>
-            </a>
-            <div className="w-full h-[1px] bg-[#e0e1e3] mt-12"></div>
-          </div>
-
-          <div className="flex flex-col gap-8 w-full">
-            <h2 className="font-manrope text-sm text-[#292929] uppercase tracking-wider font-medium">
-              WhatsApp
-            </h2>
-            <a
-              href="https://wa.me/916392934409"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-fit cursor-pointer hover:opacity-80 transition-opacity"
-            >
-              <img
-                src="/picture/whatsapp.webp"
-                alt="WhatsApp"
-                loading="lazy"
-                width="80"
-                height="80"
-                className="w-16 md:w-20 h-auto object-contain"
-              />
-            </a>
-          </div>
         </div>
       </section>
     </>
