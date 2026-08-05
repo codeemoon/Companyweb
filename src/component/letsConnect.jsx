@@ -60,7 +60,7 @@ function Project() {
     return false;
   };
 
-  async function submitInquiry(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
     setLoading(true);
 
@@ -126,7 +126,7 @@ function Project() {
             <div className="w-full max-w-7xl h-px bg-black mt-8"></div>
           </div>
 
-          <form onSubmit={submitInquiry} className="flex flex-col gap-12">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-12">
             <div className="flex items-center gap-4 text-sm font-medium uppercase text-[#292929] tracking-wider">
               <span>Step {currentStep} of {stepCount}:</span>
               <span>{stepTitle[currentStep - 1]}</span>
